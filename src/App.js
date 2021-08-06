@@ -14,7 +14,8 @@ import {
   CardHeader,
   Grid,
   Typography,
-  TextField
+  TextField,
+  Button
 } from "@material-ui/core";
 
 
@@ -85,6 +86,9 @@ function App() {
         </form>
       
       </Card>
+      <Button variant="contained" color="primary">
+        Search
+      </Button>
     </Grid>
 
   );

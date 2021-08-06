@@ -10,7 +10,7 @@ function handleName() {
     .get(`https://maps.googleapis.com/maps/api/directions/json?origin=25.8088329,-80.318059&destination=28.3809823,-81.5442194&key=${process.env.REACT_APP_API_KEY}=true`, {
       headers: {"Access-Control-Allow-Origin": '*'},
     })
-    .then((response) => { })
+    .then((response) => { console.log(response)})
     .catch((error) => console.log(error))
 }
 
