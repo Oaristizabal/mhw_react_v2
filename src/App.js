@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import './App.css';
+import companyLogo from  './assets/Lula--Orange Logo.png'
 import { makeStyles } from '@material-ui/core/styles';
 import DateFnsUtils from '@date-io/date-fns';
 import {
@@ -16,7 +17,7 @@ import {
   TextField
 } from "@material-ui/core";
 
-// put this in a css file?
+
 const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {
@@ -24,6 +25,14 @@ const useStyles = makeStyles((theme) => ({
       width: '25ch',
     },
   },
+  logo:{
+    align : 'center',
+    margin: 'auto',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  }
+
+
 }));
 
 
@@ -38,12 +47,15 @@ function App() {
   };
 
   return (
-    <div>
+    <Grid>
+      <Grid  item sm={3} style={{textAlign: "center"}} className = {classes.logo}>
+        <img src={companyLogo} style= {{objectFit: 'contain', width:'100%'}}/>
+      </Grid>
+      
       <Card>
         <form className={classes.root} noValidate autoComplete="off">
           <TextField id="outlined-basic" label="From" variant="outlined" />
           <TextField id="outlined-basic" label="To" variant="outlined" />
-
           <MuiPickersUtilsProvider utils={DateFnsUtils}>
             <KeyboardDatePicker
               disableToolbar
@@ -72,8 +84,7 @@ function App() {
         </form>
       
       </Card>
-     
-    </div>
+    </Grid>
 
   );
 }
