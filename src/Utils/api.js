@@ -5,11 +5,11 @@ import { useContext, useEffect } from "react"
 // one conveinent place, however note that File Uploads are an exception and contain an API call in their architecture
 import axios from "axios"
 
-function handleName() {
-    axios
-      .get(`${env.API_BASE_URL}/stat_run_ready/${statRunId}`, {
-        headers: contextValue.getTokens(),
-      })
-      .then((response) => {  })
-      .catch((error) => console.log(error))
-  }
+// function handleName() {
+//     axios
+//       .get(``, {
+//         headers: , //input headers
+//       })
+//       .then((response) => {  })
+//       .catch((error) => console.log(error))
+//   }
