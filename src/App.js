@@ -22,7 +22,8 @@ const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {
       margin: theme.spacing(1),
-      width: '25ch',
+      width: '90%',
+      display: 'inlineBlock',
     },
   },
   logo:{
@@ -52,7 +53,7 @@ function App() {
         <img src={companyLogo} style= {{objectFit: 'contain', width:'100%'}}/>
       </Grid>
       
-      <Card>
+      <Card >
         <form className={classes.root} noValidate autoComplete="off">
           <TextField id="outlined-basic" label="From" variant="outlined" />
           <TextField id="outlined-basic" label="To" variant="outlined" />

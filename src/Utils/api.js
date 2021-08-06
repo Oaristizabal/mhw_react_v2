@@ -5,11 +5,14 @@ import { useContext, useEffect } from "react"
 // one conveinent place, however note that File Uploads are an exception and contain an API call in their architecture
 import axios from "axios"
 
-// function handleName() {
-//     axios
-//       .get(``, {
-//         headers: , //input headers
-//       })
-//       .then((response) => {  })
-//       .catch((error) => console.log(error))
-//   }
+function handleName() {
+  axios
+    .get(`https://maps.googleapis.com/maps/api/directions/json?origin=25.8088329,-80.318059&destination=28.3809823,-81.5442194&key=${process.env.REACT_APP_API_KEY}=true`, {
+      headers: {"Access-Control-Allow-Origin": '*'},
+    })
+    .then((response) => { })
+    .catch((error) => console.log(error))
+}
+
+
+
